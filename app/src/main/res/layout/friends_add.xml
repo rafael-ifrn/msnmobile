@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/add_friend"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:hint="E-mail do amigo"
+        android:id="@+id/textView"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTintMode="multiply"
+        android:background="@color/darkBlue"
+        android:textColor="@color/lightBlue"
+        android:elevation="4dp"
+        android:text="Adicionar Amigo"
+        android:onClick="login"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:transitionName="fab"/>
+</RelativeLayout>

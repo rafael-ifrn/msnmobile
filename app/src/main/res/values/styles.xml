@@ -1,0 +1,100 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/lightBlue</item>
+        <item name="colorPrimaryDark">@color/darkestBlue</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColorPrimary">@color/lightBlue</item>
+    </style>
+
+    <!--
+
+        Login Activity
+
+    -->
+
+    <style name="loginActivity">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:background">@color/lightBlue</item>
+    </style>
+
+    <style name="loginInput">
+        <item name="android:layout_marginTop">2px</item>
+    </style>
+
+    <!--
+
+        Material Design Lists
+
+    -->
+
+
+    <style name="MaterialList">
+
+    </style>
+
+    <style name="MaterialList.Base">
+    </style>
+
+    <style name="MaterialList.Item" parent="MaterialList.Base">
+        <item name="android:layout_height">88dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="MaterialList.Text" parent="MaterialList.Base">
+        <item name="android:fontFamily">Roboto Regular</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="MaterialList.FirstLine" parent="MaterialList.Text">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MaterialList.SecondLine" parent="MaterialList.Text">
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MaterialList.Icon" parent="MaterialList.Base">
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <!--
+
+        Floating Action Button
+
+    -->
+
+    <style name="MaterialFAB">
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:src">@drawable/ic_person_add</item>
+    </style>
+
+    <!--
+
+        Navigation View
+
+    -->
+
+    <style name="NavigationView" parent="Widget.Design.NavigationView">
+        <item name="android:fontFamily">Roboto Medium</item>
+    </style>
+
+    <!--
+
+        Imports
+
+     -->
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
