@@ -47,6 +47,11 @@
         <item name="android:layout_marginTop">8dp</item>
     </style>
 
+    <style name="MaterialList.Item.Chat" parent="MaterialList.Item">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
     <style name="MaterialList.Item.TwoLines" parent="MaterialList.Item">
         <item name="android:layout_height">72dp</item>
     </style>
@@ -74,6 +79,10 @@
 
     <style name="MaterialList.Icon" parent="MaterialList.Base">
         <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <style name="MaterialList.Avatar" parent="MaterialList.Icon">
+        <item name="android:layout_marginLeft">10dp</item>
     </style>
 
     <style name="MaterialList.Icon.Right" parent="MaterialList.Base">
@@ -112,4 +121,28 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <!--
+
+        Chat
+
+    -->
+
+    <style name="chat_text_message_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="chat_timings">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>

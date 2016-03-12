@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
     tools:context="com.example.danielbastos.msn.Chat.ChatActivity"
+    android:orientation="vertical"
     >
 
     <android.support.v7.widget.Toolbar
@@ -37,4 +38,40 @@
 
     </android.support.v7.widget.Toolbar>
 
-</android.support.design.widget.CoordinatorLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messageList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="25"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:maxHeight="100dp"
+            android:textColor="@android:color/secondary_text_light"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_send"/>
+    </LinearLayout>
+
+</LinearLayout>
