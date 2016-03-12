@@ -7,4 +7,7 @@
     <color name="white">#FFF</color>
     <color name="amber">#FFC107</color>
     <color name="grey">#B9B9B9</color>
+    <color name="icon">#737373</color>
+    <color name="textHint">#B3B3B3</color>
+    <color name="pink">#FF3B80</color>
 </resources>

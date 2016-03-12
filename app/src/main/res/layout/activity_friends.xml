@@ -34,7 +34,8 @@
             android:src="@drawable/ic_face"
             android:backgroundTint="@android:color/transparent"
             android:paddingRight="16dp"
-            android:tint="@color/white" />
+            android:tint="@color/white"
+            android:onClick="goProfile"/>
     </android.support.v7.widget.Toolbar>
 
 

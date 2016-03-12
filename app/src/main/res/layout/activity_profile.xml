@@ -1,65 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5">
-        <ImageView android:id="@+id/userImage"
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="top"
+            android:layout_height="wrap_content"
+            android:background="@color/darkBlue"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_gravity="top|left"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MSN Messenger"
+                android:textColor="@color/lightBlue"
+                android:elegantTextHeight="true"
+                android:textStyle="bold"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_send"
+                android:backgroundTint="@android:color/transparent"
+                android:paddingRight="16dp"
+                android:tint="@color/white"/>
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:orientation="horizontal"
             android:src="@drawable/user"
-            android:scaleType="fitXY"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="34sp"
-            android:fontFamily="sans-serif"
-            android:layout_centerHorizontal="true"
-            android:layout_alignBottom="@id/userImage"
-            android:paddingRight="30dp"
-            android:paddingBottom="20dp"
-            android:text="Daniel Bastos"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="6">
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:elevation="-4dp"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+        <RelativeLayout
+            android:id="@+id/viewB"
+            style="@style/MaterialList.Form"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="horizontal">
 
-            <android.support.design.widget.FloatingActionButton android:id="@+id/fab2"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin" style="@style/MaterialFAB"
-                app:backgroundTint="@color/darkBlue" android:elevation="4dp"
-                android:src="@android:drawable/ic_dialog_email"
 
-                />
-            <android.support.design.widget.FloatingActionButton android:id="@+id/fab1"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin" style="@style/MaterialFAB"
-                app:backgroundTint="@color/darkBlue" android:elevation="4dp"
-                android:src="@android:drawable/ic_dialog_email"
+            <ImageButton
+                android:id="@+id/field_name_icon"
+                style="@style/MaterialList.Form.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:tint="@color/icon"
+                android:src="@drawable/ic_face"/>
 
-                />
+            <EditText
+                android:id="@+id/field_name"
+                style="@style/MaterialList.Form.Line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_toRightOf="@id/field_name_icon"
+                android:textColor="@color/black"
+                android:textColorHint="@color/textHint"
+                android:hint="Nome"/>
 
-        </LinearLayout>
+            <ImageButton
+                android:id="@+id/field_status_icon"
+                style="@style/MaterialList.Form.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/field_name_icon"
+                android:backgroundTint="@android:color/transparent"
+                android:tint="@color/icon"
+                android:src="@drawable/ic_text"/>
 
-    </RelativeLayout>
+            <EditText
+                android:id="@+id/field_status"
+                style="@style/MaterialList.Form.Line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:layout_toRightOf="@id/field_status_icon"
+                android:layout_below="@id/field_name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/textHint"
+                android:hint="Status"/>
 
-    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin" app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end" android:src="@android:drawable/ic_dialog_email" />
 
-</LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_camera"
+        app:backgroundTint="@color/amber"
+        android:tint="@color/white"
+        app:layout_anchor="@id/viewA"
+        app:layout_anchorGravity="bottom|right|end"/>
+
+</android.support.design.widget.CoordinatorLayout>

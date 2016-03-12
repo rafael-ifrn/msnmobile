@@ -1,5 +1,6 @@
 package com.example.danielbastos.msn.Friends;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
@@ -8,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.View;
 
+import com.example.danielbastos.msn.Chat.ProfileActivity;
 import com.example.danielbastos.msn.FABManager;
 import com.example.danielbastos.msn.Friends.TabLayout.TabLayoutFragment;
 import com.example.danielbastos.msn.R;
@@ -64,5 +67,10 @@ public class FriendsActivity extends AppCompatActivity implements AddFriendFragm
     @Override
     public void onReturn(AddFriendFragment addFriend) {
         mFab.show();
+    }
+
+    public void goProfile(View v){
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
     }
 }

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import com.example.danielbastos.msn.Chat.Model.Mensagem;
 import com.example.danielbastos.msn.R;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -21,7 +22,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolder>{
 
     public ChatAdapter(Context context, String amigoId){
         this.context = context;
-        mDataset = null; // TODO Buscar a lista no BD
+        mDataset = new LinkedList<Mensagem>(); // TODO Buscar a lista no BD
     }
 
     @Override
@@ -38,10 +39,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolder>{
     public void onBindViewHolder(ChatViewHolder holder, int position) {
         Mensagem msg = mDataset.get(position);
 
-        if(!msg.isMinhaMensagem("")){ // TODO Buscar meu e-mail e passar aqui
-            holder.msg.setTextColor(ContextCompat.getColor(context, R.color.amber));
+        if(!msg.isMinhaMensagem("daniel@live.com")){ // TODO Buscar meu e-mail e passar aqui
+            holder.autor.setTextColor(ContextCompat.getColor(context, R.color.amber));
         }
 
+        holder.msg.setText(msg.getMensagem());
     }
 
     public int getItemCount() {

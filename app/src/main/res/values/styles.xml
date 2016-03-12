@@ -29,6 +29,25 @@
 
     <!--
 
+        Material Design Forms
+
+    -->
+
+    <style name="MaterialList.Form" parent="MaterialList.Base">
+        <item name="android:layout_marginTop">26dp</item>
+    </style>
+
+    <style name="MaterialList.Form.Line" parent="MaterialList.Item.SingleLine">
+        <item name="android:layout_marginTop">7dp</item>
+
+    </style>
+
+    <style name="MaterialList.Form.Icon" parent="MaterialList.Icon">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <!--
+
         Material Design Lists
 
     -->
@@ -40,6 +59,7 @@
 
     <style name="MaterialList.Base">
     </style>
+
 
     <style name="MaterialList.Item" parent="MaterialList.Base">
         <item name="android:layout_marginLeft">16dp</item>
