@@ -42,9 +42,17 @@
     </style>
 
     <style name="MaterialList.Item" parent="MaterialList.Base">
-        <item name="android:layout_height">88dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="MaterialList.Item.TwoLines" parent="MaterialList.Item">
+        <item name="android:layout_height">72dp</item>
+    </style>
+
+    <style name="MaterialList.Item.SingleLine" parent="MaterialList.Item">
+        <item name="android:layout_height">56dp</item>
     </style>
 
     <style name="MaterialList.Text" parent="MaterialList.Base">
@@ -56,13 +64,20 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="MaterialList.SingleLine" parent="MaterialList.Text">
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="MaterialList.SecondLine" parent="MaterialList.Text">
-        <item name="android:paddingBottom">20dp</item>
         <item name="android:textSize">14sp</item>
     </style>
 
     <style name="MaterialList.Icon" parent="MaterialList.Base">
         <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <style name="MaterialList.Icon.Right" parent="MaterialList.Base">
+        <item name="android:layout_marginRight">6dp</item>
     </style>
 
     <!--

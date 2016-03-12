@@ -1,5 +1,7 @@
 package com.example.danielbastos.msn.Friends;
 
+import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +24,13 @@ public class FriendsAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private List<DummyContent.DummyItem> mDataset;
 
+    private int listType;
+    private Context context;
 
+    public FriendsAdapter(int listType, Context context) {
+        this.listType = listType;
+        this.context = context;
 
-    public FriendsAdapter(int listType) {
         switch (listType){
             case FriendsAdapter.LISTA_AMIGOS: {
                 mDataset = DummyContent.ITEMS;
@@ -44,12 +50,28 @@ public class FriendsAdapter extends RecyclerView.Adapter<ViewHolder> {
     // Create new views (invoked by the layout manager)
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        int layoutId;
+
+        switch (listType){
+            case FriendsAdapter.LISTA_AMIGOS:
+                layoutId = R.layout.friends_list_item;
+                break;
+            case FriendsAdapter.LISTA_BLOQUEADOS:
+                layoutId = R.layout.friends_blocked_item;
+                break;
+            case FriendsAdapter.LISTA_PEDIDOS:
+                layoutId = R.layout.friends_request_item;
+                break;
+            default:
+                layoutId = R.layout.friends_list_item;
+        }
+
         // create a new view
         View view = LayoutInflater
                     .from(parent.getContext())
-                    .inflate(R.layout.friends_list_item, parent, false);
+                    .inflate(layoutId, parent, false);
 
-        ViewHolder vh = new ViewHolder(view);
+        ViewHolder vh = new ViewHolder(view, this.listType);
         return vh;
     }
 
@@ -61,9 +83,12 @@ public class FriendsAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         DummyContent.DummyItem person = mDataset.get(position);
 
+        if(this.listType == FriendsAdapter.LISTA_AMIGOS) {
+            holder.lastText.setText(person.lastText);
+        }
+
         holder.name.setText(person.name);
         holder.picture.setImageResource(person.picture);
-        holder.lastText.setText(person.lastText);
 
     }
 

@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    style="@style/MaterialList.Item.TwoLines"
+    style="@style/MaterialList.Item.SingleLine"
     android:foreground="?android:attr/selectableItemBackground"
     >
 
@@ -23,26 +23,29 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_toRightOf="@id/icon"
         android:layout_centerVertical="true">
         <TextView
             android:id="@+id/firstLine"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            style="@style/MaterialList.FirstLine"/>
-        <TextView
-            android:id="@+id/secondLine"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:ellipsize="marquee"
-            android:singleLine="true"
-            style="@style/MaterialList.SecondLine"/>
+            style="@style/MaterialList.SingleLine"/>
     </LinearLayout>
+
+    <ImageButton
+        style="@style/MaterialList.Icon.Right"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="@color/white"
+        android:tint="@color/grey"
+        android:src="@drawable/ic_add"/>
 
 
 </RelativeLayout>

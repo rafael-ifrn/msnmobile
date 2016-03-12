@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.danielbastos.msn.R;
 
-public class ChatActivity extends AppCompatActivity implements View.OnClickListener{
+public class ChatActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.chatToolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
+        getSupportActionBar().setLogo(R.drawable.ic_logo);
 
 
         /*
@@ -44,21 +45,5 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView mTextView = (TextView) findViewById(R.id.friendName);
         mTextView.setText(name);
-
-        /*
-
-            TAB Management
-
-         */
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(this);
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(this, ProfileActivity.class);
-        startActivity(intent);
     }
 }

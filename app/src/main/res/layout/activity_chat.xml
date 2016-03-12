@@ -23,30 +23,18 @@
             android:textColor="@color/lightBlue"
             android:elegantTextHeight="true"
             android:textStyle="bold"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:paddingStart="10dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_face"
+            android:backgroundTint="@android:color/transparent"
+            android:paddingRight="16dp"
+            android:tint="@color/white" />
 
     </android.support.v7.widget.Toolbar>
-
-    <android.support.design.widget.CoordinatorLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-        <android.support.design.widget.FloatingActionButton
-            style="@style/MaterialFAB" android:id="@+id/fab"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            app:backgroundTint="@color/amber"
-            android:transitionName="fab"/>
-
-        <FrameLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/containerView">
-        </FrameLayout>
-
-    </android.support.design.widget.CoordinatorLayout>
 
 </android.support.design.widget.CoordinatorLayout>

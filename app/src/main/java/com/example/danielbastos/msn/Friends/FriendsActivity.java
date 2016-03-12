@@ -31,24 +31,7 @@ public class FriendsActivity extends AppCompatActivity implements AddFriendFragm
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-        /*
-
-            Drawer Configuration
-
-        */
-        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-
-        ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this,
-                                                                        mDrawerLayout,
-                                                                        R.string.app_name,
-                                                                        R.string.app_name);
-
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-        mDrawerToggle.syncState();
-
+        getSupportActionBar().setLogo(R.drawable.ic_logo);
 
 
         /*

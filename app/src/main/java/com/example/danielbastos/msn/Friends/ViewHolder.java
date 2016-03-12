@@ -18,7 +18,7 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
     public ImageView picture;
     public View personItem;
 
-    public ViewHolder(View v) {
+    public ViewHolder(View v, int listType) {
         super(v);
 
         this.name = (TextView) v.findViewById(R.id.firstLine);
@@ -26,7 +26,9 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         this.picture = (ImageView) v.findViewById(R.id.icon);
         this.personItem = v;
 
-        v.setOnClickListener(this);
+        if(listType == FriendsAdapter.LISTA_AMIGOS){
+            v.setOnClickListener(this);
+        }
     }
 
     @Override

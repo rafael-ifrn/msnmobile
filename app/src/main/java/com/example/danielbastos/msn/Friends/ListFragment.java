@@ -20,7 +20,7 @@ import com.example.danielbastos.msn.R;
  */
 public class ListFragment extends Fragment {
 
-    private static final String PARAM_NAME = "listName";
+    private static final String LIST_TYPE_PARAM = "listName";
     private int listType;
 
     /**
@@ -34,7 +34,7 @@ public class ListFragment extends Fragment {
         ListFragment fragment = new ListFragment();
 
         Bundle args = new Bundle();
-        args.putInt(PARAM_NAME, listType);
+        args.putInt(LIST_TYPE_PARAM, listType);
 
         fragment.setArguments(args);
         return fragment;
@@ -52,14 +52,13 @@ public class ListFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 
-        listType = getArguments().getInt(PARAM_NAME);
-        mAdapter = new FriendsAdapter(listType);
+        listType = getArguments().getInt(LIST_TYPE_PARAM);
+        mAdapter = new FriendsAdapter(listType, getContext());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate View
         RecyclerView view = (RecyclerView) inflater.inflate(R.layout.friends_list, container, false);
 
