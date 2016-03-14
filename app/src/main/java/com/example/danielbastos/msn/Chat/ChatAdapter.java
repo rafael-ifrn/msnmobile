@@ -23,6 +23,17 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolder>{
     public ChatAdapter(Context context, String amigoId){
         this.context = context;
         mDataset = new LinkedList<Mensagem>(); // TODO Buscar a lista no BD
+
+        mDataset.add(new Mensagem(0, "abc", "rafael@mail.com", "daniel@mail.com", "Mensagem grande p" +
+                "ra testar e ver como fica uma mensagem grande no chat do jeito que tá a mensagem gr" +
+                "ande e grande que só o caramba beleza é grande a mensagem é grande", "11/09/89"));
+        mDataset.add(new Mensagem(0, "abc", "daniel@mail.com", "rafael@mail.com", "Mensagem grande p" +
+                "ra testar e ver como fica uma mensagem grande no chat do jeito que tá a mensagem gr" +
+                "ande e grande que só o caramba beleza é grande a mensagem é grande", "11/09/89"));
+        mDataset.add(new Mensagem(0, "abc", "rafael@mail.com", "daniel@mail.com", "Blz", "11/09/89"));
+        mDataset.add(new Mensagem(0, "abc", "daniel@mail.com", "rafael@mail.com", "Beleza?", "11/09/89"));
+        mDataset.add(new Mensagem(0, "abc", "rafael@mail.com", "daniel@mail.com", "Oi", "11/09/89"));
+        mDataset.add(new Mensagem(0, "abc", "daniel@mail.com", "rafael@mail.com", "Oi", "11/09/89"));
     }
 
     @Override
@@ -39,7 +50,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolder>{
     public void onBindViewHolder(ChatViewHolder holder, int position) {
         Mensagem msg = mDataset.get(position);
 
-        if(!msg.isMinhaMensagem("daniel@live.com")){ // TODO Buscar meu e-mail e passar aqui
+        if(!msg.isMinhaMensagem("daniel@mail.com")){ // TODO Buscar meu e-mail e passar aqui
             holder.autor.setTextColor(ContextCompat.getColor(context, R.color.amber));
         }
 

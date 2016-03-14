@@ -38,18 +38,18 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/icon1"
+        android:id="@+id/add"
         style="@style/MaterialList.Icon.Right"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/icon2"
+        android:layout_toLeftOf="@+id/reject"
         android:backgroundTint="@color/white"
         android:tint="@color/grey"
         android:src="@drawable/ic_add"/>
 
     <ImageButton
-        android:id="@+id/icon2"
+        android:id="@+id/reject"
         style="@style/MaterialList.Icon.Right"
         android:layout_width="24dp"
         android:layout_height="24dp"

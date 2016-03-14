@@ -1,15 +1,13 @@
 package com.example.danielbastos.msn.Friends;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.danielbastos.msn.Friends.Model.DummyContent;
+import com.example.danielbastos.msn.Friends.Model.RequestListeners;
 import com.example.danielbastos.msn.R;
 
 import java.util.List;
@@ -85,10 +83,21 @@ public class FriendsAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         if(this.listType == FriendsAdapter.LISTA_AMIGOS) {
             holder.lastText.setText(person.lastText);
+        } else if (this.listType == FriendsAdapter.LISTA_PEDIDOS) {
+            View v = holder.itemView;
+
+            v.findViewById(R.id.add).setOnClickListener(RequestListeners.aceitar);
+            v.findViewById(R.id.reject).setOnClickListener(RequestListeners.rejeitar);
+        } else if(this.listType == FriendsAdapter.LISTA_BLOQUEADOS){
+            View v = holder.itemView;
+
+            v.findViewById(R.id.unblockBtn).setOnClickListener(RequestListeners.desbloquear);
         }
 
         holder.name.setText(person.name);
         holder.picture.setImageResource(person.picture);
+
+
 
     }
 

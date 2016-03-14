@@ -38,6 +38,7 @@
     </LinearLayout>
 
     <ImageButton
+        android:id="@+id/unblockBtn"
         style="@style/MaterialList.Icon.Right"
         android:layout_width="24dp"
         android:layout_height="24dp"
